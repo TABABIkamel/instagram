@@ -1,0 +1,17 @@
+
+<nz-input-group [nzSuffix]="suffixIconSearch">
+  <input type="text" [(ngModel)]="urlInsta" nz-input placeholder="input search text" />
+</nz-input-group>
+<ng-template #suffixIconSearch>
+  <i nz-icon nzType="search" (click)="clickEvent()"></i>
+</ng-template>
+<div *ngIf="show"  class="center mt-3">
+
+    <nz-card nzHoverable style="width:400px;height: 450px" [nzCover]="coverTemplate">
+      <a href=""><nz-card-meta nzTitle="{{nombreJaime}} J'aime" nzDescription="www.instagram.com"></nz-card-meta></a>
+    </nz-card>
+    <ng-template  #coverTemplate>
+      <img style="height: 400px" alt="example" src="https://www.pellerin-formation.com/wp-content/uploads/2019/08/Contenus-Crees-Utilisateurs-Instagram-1.png" />
+    </ng-template>
+  </div>
+

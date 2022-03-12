@@ -1,0 +1,22 @@
+
+
+  <button [disabled]="disable" class="center" nzType="dashed" nzDanger (click)="showSpinner('sp5')">GAME</button>
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+
+<ngx-spinner name="sp5" bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p>
+</ngx-spinner>
+<div class="d-flex justify-content-center ">
+  <div class="m-5" *ngFor="let win of tab; let i = index">
+    <nz-card class="p-2 flex-fill" nzHoverable style="width:240px" [nzCover]="coverTemplate">
+      <a href="{{tabUrls[i]}}"><nz-card-meta nzTitle="{{win}}" nzDescription="www.instagram.com"></nz-card-meta></a>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img style="width:220px;height:250px" alt="example" src="{{tabImages[i]}}" />
+    </ng-template>
+  </div>
+</div>
