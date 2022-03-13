@@ -2,5 +2,11 @@
   text-align: center;
   margin: 0 auto;
   margin-right: 700px;
+  margin-bottom: 40px;
   width: 100px;
+}
+
+.nz-button{
+  margin-right: 8px;
+  margin-bottom: 12px;
 }

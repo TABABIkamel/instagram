@@ -1,6 +1,16 @@
+<div class="d-flex justify-content-start">
 
-
-  <button [disabled]="disable" class="center" nzType="dashed" nzDanger (click)="showSpinner('sp5')">GAME</button>
+  <div class="mr-2">
+    <nz-input-group >
+      <input type="text" style="height: 38px;width: 200px" nzType="number" nz-input placeholder="number of winners persons" />
+    </nz-input-group>
+  </div>
+  <div>
+    <!--<button [disabled]="disable" class="center rounded mb-0" nzType="primary" nzDanger (click)="showSpinner('sp5')">START</button>-->
+    <!--    <button class="nz-button"  nzType="primary">Primary</button>-->
+    <button [disabled]="disable"  type="button" class="btn btn-primary" (click)="showSpinner('sp5')">START</button>
+  </div>
+</div>
 
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,3 +30,4 @@
     </ng-template>
   </div>
 </div>
+
